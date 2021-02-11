@@ -18,6 +18,7 @@ if (play) {
     if (questionOne === 'milan' || questionOne === 'acmilan') {
       alert('Now You know about my Fav Team');
       // eslint-disable-next-line no-unused-vars
+      document.getElementById('myFavTeam').innerHTML = questionOne;
       counter++;
     } else {
       alert('You Should Support AC Milan bro :p ');
@@ -31,6 +32,7 @@ if (play) {
     console.log(questionTwo);
     if (questionTwo === 'mansaf') {
       alert('Now You know about my Fav Food');
+      document.getElementById('myFavFood').innerHTML = questionTwo;
       // eslint-disable-next-line no-unused-vars
       counter++;
     } else {
@@ -45,6 +47,7 @@ if (play) {
     console.log(questionThree);
     if (questionThree === 'irbid' || questionThree === 'irbed') {
       alert('Now You know about my Cites');
+      document.getElementById('myCites').innerHTML = questionThree;
       // eslint-disable-next-line no-unused-vars
       counter++;
 
@@ -62,22 +65,11 @@ if (play) {
       alert('Yeah that\'s right ');
       // eslint-disable-next-line no-unused-vars
       counter++;
+      document.getElementById('myBcDegree').innerHTML = questionFour;
 
     } else {
       alert('No problem a lot of people gussing that wrong :D');
     }
-    /*if ((questionOne === 'milan' || questionOne === 'acmilan') && (questionTwo === 'mansaf') && (questionThree === 'irbid' || questionThree === 'irbed') && (questionFour === 'se' || questionFour === 'software' || questionFour === 'computer' || questionFour === 'software engineering')) {
-      document.getElementById('myFavTeam').innerHTML = questionOne;
-      document.getElementById('myFavFood').innerHTML = questionTwo;
-      document.getElementById('myCites').innerHTML = questionThree;
-      document.getElementById('myBcDegree').innerHTML = questionFour;
-      document.getElementById('myName').innerHTML = 'Mohmmad Alazzam';
-      document.getElementById('myAge').innerHTML = 26;
-      document.getElementById('aboutMeTable').style.display = 'block';
-    }
-    else {
-      document.getElementById('preef').style.display = 'block';
-    }*/
   }
   degree();
   // eslint-disable-next-line no-inner-declarations
@@ -90,6 +82,7 @@ if (play) {
       // eslint-disable-next-line no-unused-vars
       counter++;
 
+
     } else {
       alert('No...');
     }
@@ -100,11 +93,12 @@ if (play) {
     let trying = 1;
     while (trying <= 4) {
       let questionSix = prompt('let\'s Guess my age');
-      // console.log(parseInt(questionSix));
       if (parseInt(questionSix) === 26) {
         // eslint-disable-next-line no-unused-vars
         counter++;
         alert('You know my age now');
+        document.getElementById('myAge').innerHTML = 26;
+        document.getElementById('myName').innerHTML = 'Mohmmad Alazzam';
         break;
       }
       else if (parseInt(questionSix) > 26) {
@@ -131,9 +125,7 @@ if (play) {
   function seven() {
     let questionSeven = prompt('Let\'s guess one of my favorite series');
     let series = ['breakingBad', 'gameOfThrones', 'dexter', 'narcos'];
-    // console.log(questionSeven);
     let correctGuess = 7;
-    // console.log(questionSeven);
     for (let i = 0; i < correctGuess; i++) {
       for (let j = 0; j < series.length; j++) {
         if (questionSeven.toLowerCase() === series[j].toLowerCase()) {
@@ -160,6 +152,7 @@ if (play) {
     }
   }
   seven();
+  document.getElementById('aboutMeTable').style.display = 'block';
 }
 
 
